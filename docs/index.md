@@ -1,17 +1,23 @@
-# Welcome to MkDocs
+# 欢迎来到我的博客 👋
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+这里是我的个人笔记和技术博客，记录学习和思考的过程。
 
-## Commands
+## 最近更新
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+{{ recent_posts(10) }}
 
-## Project layout
+## 内容分类
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### 📝 [笔记](notes/index.md)
+浏览所有笔记文章
+
+### 🏷️ [标签](tags.md)
+按标签分类查看内容
+
+## 关于我
+
+热爱技术，持续学习。
+
+---
+
+> 💡 本站使用 [MkDocs](https://www.mkdocs.org/) 和 [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) 构建

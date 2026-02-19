@@ -1,1 +1,84 @@
-site_name: My Docs
+site_name: 我的博客
+site_url: https://tongsun99.github.io/
+site_author: Tong Sun
+site_description: 个人博客和笔记
+
+# 主题配置
+theme:
+  name: material
+  language: zh
+  palette:
+    # 浅色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    # 深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+
+  features:
+    - navigation.instant      # 即时加载
+    - navigation.tracking     # 锚点追踪
+    - navigation.tabs         # 导航标签
+    - navigation.tabs.sticky  # 导航标签固定
+    - navigation.sections     # 导航分组
+    - navigation.top          # 返回顶部按钮
+    - search.suggest          # 搜索建议
+    - search.highlight        # 搜索高亮
+    - content.code.copy       # 代码复制按钮
+    - content.tabs.link       # 链接标签页
+
+# 自定义 CSS
+extra_css:
+  - stylesheets/extra.css
+
+# 插件配置
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - tags:
+      tags_file: tags.md
+  - macros
+
+# 自定义钩子
+hooks:
+  - auto_nav_sort.py
+
+# Markdown 扩展
+markdown_extensions:
+  - pymdownx.highlight:       # 代码高亮
+      anchor_linenums: true
+  - pymdownx.superfences      # 代码块
+  - pymdownx.inlinehilite     # 行内代码高亮
+  - pymdownx.snippets         # 代码片段
+  - pymdownx.tasklist:        # 任务列表
+      custom_checkbox: true
+  - pymdownx.emoji:           # Emoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition                # 提示框
+  - pymdownx.details          # 可折叠提示框
+  - attr_list                 # 属性列表
+  - md_in_html                # HTML 中的 Markdown
+  - toc:                      # 目录
+      permalink: true
+
+# 导航结构
+nav:
+  - 首页: index.md
+  - 笔记:
+    - notes/index.md
+    - Python 装饰器详解: notes/python-decorator.md
+    - Docker 容器化实践: notes/docker-practice.md
+    - Git 工作流最佳实践: notes/git-workflow.md
+    - React Hooks 最佳实践: notes/react-hooks.md
+  - 标签: tags.md
